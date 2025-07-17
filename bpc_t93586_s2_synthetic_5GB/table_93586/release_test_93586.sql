@@ -1,3 +1,10 @@
+/*
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+This source code is licensed under the MIT license found in the
+LICENSE file in the root directory of this source tree.
+*/
+
 INSERT OVERWRITE TABLE table_SPdBtF_Y9di_dNz1Hh3XBLWloMbgaL_el8BCohoZGlQ_
                   PARTITION (ds='2018-12-29')
                   SELECT
@@ -15,6 +22,6 @@ INSERT OVERWRITE TABLE table_SPdBtF_Y9di_dNz1Hh3XBLWloMbgaL_el8BCohoZGlQ_
                       WHERE ds='2018-12-28'
                   ) b
                   ON b.`r7h` = d.`r7h` AND b.`RB9` = d.`RB9` AND b.`FJuZpmHF6Y` = d.`FJuZpmHF6Y`
-                  WHERE 
+                  WHERE
                   (coalesce(d.cvwqz6MyB1, b.cvwqz6MyB1) = 105)
                AND coalesce(d.`FJuZpmHF6Y`, b.`FJuZpmHF6Y`)  in (1137159934)
